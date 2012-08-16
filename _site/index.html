@@ -21,7 +21,15 @@
         <h4>Topics:</h4>
         <ul class="posts">
           
-            <li><span>03 May 2012</span> &raquo; <a href="/2012/05/03/circuit-breaker.html">Circuit Breaker Pattern Revisited</a></li>
+            <li><small><span>01 May 2012</span></small> <span><a href="/2012/05/01/circuit-breaker-pattern-revisited.html">Circuit Breaker Pattern Revisited</a></span></li>
+          
+            <li><small><span>12 Apr 2012</span></small> <span><a href="/2012/04/12/java-bridge-method.html">Java bridge method</a></span></li>
+          
+            <li><small><span>21 Mar 2012</span></small> <span><a href="/2012/03/21/java-array-memory-allocation.html">Java array memory allocation</a></span></li>
+          
+            <li><small><span>12 Feb 2012</span></small> <span><a href="/2012/02/12/the-best-abstractions-are-your-own.html">The best abstractions are your own</a></span></li>
+          
+            <li><small><span>05 Jan 2012</span></small> <span><a href="/2012/01/05/how-fast-is-your-cpu.html">How fast is your CPU?</a></span></li>
           
         </ul>        
       </header>
@@ -29,11 +37,9 @@
         <div class='posts'>
   
     <div>
-      <h3><span>03 May 2012</span> &raquo; <a href='/2012/05/03/circuit-breaker.html'>Circuit Breaker Pattern Revisited</a></h3>
+      <h3><span>01 May 2012</span> &raquo; <a href='/2012/05/01/circuit-breaker-pattern-revisited.html'>Circuit Breaker Pattern Revisited</a></h3>
       <div>
-        <h3 id='circuit_breaker_pattern_revisited'>Circuit Breaker Pattern revisited</h3>
-
-<p>The circuit breaker pattern can be really useful when building a system based on distributed services. It helps to keep the whole system healthy even when some of its sub-services have troubles. The first proposal of the circuit breaker for this kind on problem I found in Michael Nygard&#8217;s great book, <a href='http://www.pragprog.com/titles/mnee/release-it'>Release It!</a>. The pattern doesn&#8217;t require sophisticated implementation. But you don&#8217;t even have to do it because there are some ready solutions like the Spring-based <a href='http://code.google.com/p/kite-lib/'>kite-lib</a>. Let&#8217;s check what&#8217;s inside.</p>
+        <p>The circuit breaker pattern can be really useful when building a system based on distributed services. It helps to keep the whole system healthy even when some of its sub-services have troubles. The first proposal of the circuit breaker for this kind on problem I found in Michael Nygard&#8217;s great book, <a href='http://www.pragprog.com/titles/mnee/release-it'>Release It!</a>. The pattern doesn&#8217;t require sophisticated implementation. But you don&#8217;t even have to do it because there are some ready solutions like the Spring-based <a href='http://code.google.com/p/kite-lib/'>kite-lib</a>. Let&#8217;s check what&#8217;s inside.</p>
 
 <p>The core logic of the circuit breaker extracted from the library:</p>
 
@@ -156,6 +162,34 @@ interface CircuitBreakerCallback&amp;lt;T&amp;gt; {
 
 <li>The circuit breaker can be really useful but should not be used to hides problems in your system/architecture. You must be sure that the case when the sub-service is down or slow is really normal case. It shouldn&#8217;t be a workaround for some problems of unstable services.</li>
 </ul>
+      </div>
+    </div>
+  
+    <div>
+      <h3><span>12 Apr 2012</span> &raquo; <a href='/2012/04/12/java-bridge-method.html'>Java bridge method</a></h3>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div>
+      <h3><span>21 Mar 2012</span> &raquo; <a href='/2012/03/21/java-array-memory-allocation.html'>Java array memory allocation</a></h3>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div>
+      <h3><span>12 Feb 2012</span> &raquo; <a href='/2012/02/12/the-best-abstractions-are-your-own.html'>The best abstractions are your own</a></h3>
+      <div>
+        
+      </div>
+    </div>
+  
+    <div>
+      <h3><span>05 Jan 2012</span> &raquo; <a href='/2012/01/05/how-fast-is-your-cpu.html'>How fast is your CPU?</a></h3>
+      <div>
+        
       </div>
     </div>
   

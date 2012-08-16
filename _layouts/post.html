@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>JavaDetails by alider</title>
-
+    <title>JavaDetails by alider :: {{ page.title }}</title>
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -21,11 +20,12 @@
         <h4>Topics:</h4>
         <ul class="posts">
           {% for post in site.posts %}
-            <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+            <li><small><span>{{ post.date | date_to_string }}</span></small> <span><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></span></li>
           {% endfor %}
         </ul>        
       </header>
       <section>
+        <h3>{{ page.title }}</h3>
         {{ content }}
       </section>
       <footer>

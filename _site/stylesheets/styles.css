@@ -54,7 +54,7 @@ a small {
 }
 
 .wrapper {
-  width:960px;
+  width:1060px;
   margin:0 auto;
 }
 
@@ -104,7 +104,7 @@ img {
 }
 
 header {
-  width:260px;
+  width:300px;
   float:left;
   position:fixed;
 }
@@ -170,7 +170,8 @@ header ul a strong {
 */
 
 header ul {
-  padding-left:20px;
+  padding-left:0px;
+  list-style:none;
 }
 
 section {
