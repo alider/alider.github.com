@@ -1,10 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+/*@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);*/
 
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+/*  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
-  font-weight:300;
+  font-weight:300;*/
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #232323;
+/*  background-color: #FBFAF7;*/
+	margin: 0;
+	line-height: 1.4em;
+	-webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -33,7 +40,8 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color:#39c;
+/*  color:#39c;*/
+  color:#C30000;
   font-weight:400;
   text-decoration:none;
 }
@@ -46,7 +54,7 @@ a small {
 }
 
 .wrapper {
-  width:860px;
+  width:960px;
   margin:0 auto;
 }
 
@@ -96,11 +104,12 @@ img {
 }
 
 header {
-  width:270px;
+  width:260px;
   float:left;
   position:fixed;
 }
 
+/*
 header ul {
   list-style:none;
   height:40px;
@@ -158,9 +167,14 @@ header ul a strong {
   display:block;
   color:#222;
 }
+*/
+
+header ul {
+  padding-left:20px;
+}
 
 section {
-  width:500px;
+  width:700px;
   float:right;
   padding-bottom:50px;
 }
@@ -177,7 +191,7 @@ hr {
 }
 
 footer {
-  width:270px;
+  width:260px;
   float:left;
   position:fixed;
   bottom:50px;
