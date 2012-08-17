@@ -9,6 +9,11 @@ source:      .
 destination: ./_site
 plugins:     ./_plugins
 
+author :
+  name : Adam Lider
+  email : adam.lider@gmail.com
+  github : alider
+
 future:      true
 lsi:         false
 pygments:    false
