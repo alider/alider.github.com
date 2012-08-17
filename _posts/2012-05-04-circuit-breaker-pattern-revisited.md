@@ -5,8 +5,10 @@ description: ""
 category: 
 tags: []
 ---
+[releaseit]: http://www.pragprog.com/titles/mnee/release-it
+[kitelib]: http://code.google.com/p/kite-lib/
 
-The circuit breaker pattern can be really useful when building a system based on distributed services. It helps to keep the whole system healthy even when some of its sub-services have troubles. The first proposal of the circuit breaker for this kind on problem I found in Michael Nygard's great book, [Release It!](http://www.pragprog.com/titles/mnee/release-it). The pattern doesn't require sophisticated implementation. But you don't even have to do it because there are some ready solutions like the Spring-based [kite-lib](http://code.google.com/p/kite-lib/). Let's check what's inside.
+The circuit breaker pattern can be really useful when building a system based on distributed services. It helps to keep the whole system healthy even when some of its sub-services have troubles. The first proposal of the circuit breaker for this kind on problem I found in Michael Nygard's great book, [Release It!][releaseit]. The pattern doesn't require sophisticated implementation. But you don't even have to do it because there are some ready solutions like the Spring-based [kite-lib][kitelib]. Let's check what's inside.
 
 The core logic of the circuit breaker extracted from the library:
 
