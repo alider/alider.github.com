@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Circuit Breaker Pattern Revisited"
+title: "Circuit breaker pattern revisited"
 description: ""
 category: 
 tags: []
@@ -118,7 +118,7 @@ Instead of using timeout for implementing scenario when the circuit is OPEN we c
 
 The environment for the solution is multithreaded by its nature. In most cases it's a web application aggregating content from external services. This kind of application has thread pool used to process request handlers. So the circuit breaker needs to be prepared to be executed by many threads at the same time. Also, it must be transparent for the whole system especially in terms of performance and liveness. The biggest risk with the solution (in both implementations) is the situation that the circuit is OPEN even in the case when the service is healthy again. That's something we have to prevent for sure. At the same time we can not make too much locking especially for the case when everything is fine.
 
-Both solutions are based on similar pattern - global mutable variable holding the state of the circuit. What we must be sure here is the fact that modifications to this state must be propagated through the CPU caches to main memory so that other threads can see it. Because the change of this variable isn't based on the previous value (read-modify-write) we can do it with quite lightweight <code>volatile</code>. We have also additional global variable - failures counter. In this case we couldn't use <code>volatile</code> for it because <code>failures++</code> isn't atomic (read-modify-write). So, <code>AtomicInteger.incrementAndGet</code> is used which is a little more expensive (from the performance point of view) then <code>volatile</code> but much less then any explicit locking.
+Both solutions are based on similar pattern - global mutable variable holding the state of the circuit. What we must be sure here is the fact that modifications to this state must be propagated through the CPU caches to main memory so that other threads can see it. Because the change of this variable isn't based on the previous value (read-modify-write) we can do it with quite lightweight `volatile`. We have also additional global variable - failures counter. In this case we couldn't use `volatile` for it because `failures++` isn't atomic (read-modify-write). So, `AtomicInteger.incrementAndGet` is used which is a little more expensive (from the performance point of view) then `volatile` but much less then any explicit locking.
 
 It must be said that the second implementation is more risky because of this additional monitor thread which is the only one place where once opened circuit can be closed. So in case the monitor thread dies we must have some fallback solution in place. Also it might happen that the monitor thread failed at startup, so we should have here some logic to reset the failures counter after some time/value.
 

@@ -8,8 +8,8 @@ tags: []
 
 There are two ways to create an array in Java:
 
-- array creation expression: <code>int[] array = new int[5]</code>
-- array initializer: <code>int[] array = {0,0,0,0,0}</code>
+- array creation expression: `int[] array = new int[5]`
+- array initializer: `int[] array = {0,0,0,0,0}`
 
 Both cases require the element type and the array length to be specified. These two values are needed to allocate appropriate memory structure for the array. Arrays in Java are just objects and theirs memory representation is quite similar:
 
@@ -29,7 +29,7 @@ Because of it's simplicity 32-bit platform was chosen for the following examples
 
 **The Unsafe**
 
-Java allocates and releases memory for our objects on it's own and hides memory addresses from us behind object references (in fact they are hidden pointers). But at the same time we have backdoor solution called <code>sun.misc.Unsafe</code> which allows to play directly with the memory.
+Java allocates and releases memory for our objects on it's own and hides memory addresses from us behind object references (in fact they are hidden pointers). But at the same time we have backdoor solution called `sun.misc.Unsafe` which allows to play directly with the memory.
 
 Note: As the class name says it's really unsafe way of accessing memory and shouldn't be used in any production code.
 
@@ -76,7 +76,7 @@ The output:
 Each line represents 4-byte value:
 
 - Line 1: Mark
-- Line 2: <code>int[]</code> class object pointer
+- Line 2: `int[]` class object pointer
 - Line 3: the array size
 - Line 4-12: the array elements
 

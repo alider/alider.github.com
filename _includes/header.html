@@ -1,0 +1,10 @@
+<p><i>// just some implementation details</i></p>
+<!-- <p class="view"><a href="https://github.com/alider">View My GitHub Profile</a></p> -->
+<ul class="posts">
+  {% for post in site.posts %}
+    <li>
+      <small><span>{{ post.date | date_to_string }}</span></small><br/>
+      <span><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></span>
+    </li>
+  {% endfor %}
+</ul>
