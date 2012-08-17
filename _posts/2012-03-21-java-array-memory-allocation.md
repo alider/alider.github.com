@@ -93,7 +93,7 @@ Printing the array:
       field.setAccessible(true);
       Unsafe unsafe = (Unsafe) field.get(null);
 
-      int[][] array = ...
+      int[][] array = { {1,2,3},{4,5,6},{7,8,9} }
       long numberOfWords = 6 + 6 * 3;
 
       for (long i = 0; i < numberOfWords; i++) {

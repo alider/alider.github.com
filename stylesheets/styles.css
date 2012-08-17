@@ -7,8 +7,9 @@ body {
   font-weight:300;*/
   font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
-	color: #232323;
-/*  background-color: #FBFAF7;*/
+/*  color: #232323;*/
+  color:#000;
+  background-color: #FBFAF7;
 	margin: 0;
 	line-height: 1.4em;
 	-webkit-font-smoothing: antialiased;
@@ -42,7 +43,7 @@ h3, h4, h5, h6 {
 a {
 /*  color:#39c;*/
   color:#C30000;
-  font-weight:400;
+/*  font-weight:400;*/
   text-decoration:none;
 }
 
@@ -104,7 +105,7 @@ img {
 }
 
 header {
-  width:300px;
+  width:260px;
   float:left;
   position:fixed;
 }
@@ -174,10 +175,22 @@ header ul {
   list-style:none;
 }
 
+header ul li {
+  padding-bottom:5px;
+}
+
+header h4 {
+  margin-bottom:5px;
+}
+
 section {
-  width:700px;
+  width:760px;
   float:right;
   padding-bottom:50px;
+}
+
+section h2 span {
+  color:#777777;
 }
 
 small {
