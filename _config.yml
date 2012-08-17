@@ -16,7 +16,7 @@ author :
 
 future:      true
 lsi:         false
-pygments:    false
+pygments:    true
 markdown:    maruku
 permalink:   date
 
