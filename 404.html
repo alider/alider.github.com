@@ -3,29 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>JavaDetails by alider :: {{ page.title }}</title>
+    <title>JavaDetails by alider</title>
+
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script type="text/javascript"> function delayer() {window.location = "http://alider.github.com"} </script>
   </head>
-  <body>
+  <body onLoad="setTimeout('delayer()', 5000)">
     <div class="wrapper">
       <header>
-        <h1><a href="/">JavaDetails</a></h1>
+        <h1>JavaDetails</h1>
         <p><i>// just some implementation details</i></p>
-        {% include header.html %}       
       </header>
       <section>
-        <h2><span class="date">{{ page.date | date_to_string }} &raquo;</span> {{ page.title }}</h2>
-        {{ content }}
+        <h1>Ups!</h1>
+        <p>Looks like the page you&#8217;re after doesn&#8217;t exist.  Guess you&#8217;re going to have to go <a href="/">home</a> and try again!</p>
+        <p>You will be redirected momentarily...</p>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages</small></p>
       </footer>
     </div>
-    {% include analytics.html %}
   </body>
 </html>
