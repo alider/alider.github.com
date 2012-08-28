@@ -100,7 +100,7 @@ When defining an array in the following way: `int[ ] array = new array[100]` we 
 
 Anyway, in the test the array is defined with concrete sizes for both dimensions which means that memory for all arrays is allocated at once in the following way:
 
-![](http://3.bp.blogspot.com/-424ytTIpIQc/T3nl597EFoI/AAAAAAAACOE/ZZLJP6RqsIU/s1600/2-dim-arrays.png)
+![](/images/cpu-caches/multi-dim-array.png)
 
 What's really important here is the fact that all arrays are allocated as continuous memory block.
 
@@ -115,7 +115,7 @@ Generally CPU can be described as a loop of the following steps:
 
 Seems to be a lot of work for single pass. Fortunately that's not how the CPUs work these days. First of all most of the steps above are made in parallel even in one single core - modern CPU has even 6+ execution units per core. The second important thing are caches. We have multi-level instruction and data caches which can help a lot if we allow them. When CPU needs some data first it looks in registers then caches L1, L2, L3 and then goes to the memory. Of course each next step in this checking has much higher access time. Because of that when some data is read from the memory will be stored in caches for some possible usage in future. And not only bytes which are needed right now but also many next bytes which are likely to be needed soon. This way in one memory read access CPU can get a lot of data and in case the pre-fetching was accurate it will save a lot of time/cycles. So that's why the first test version is so fast - it just accesses the memory in a linear way allowing caches to do it's best. It's just cache friendly. But the second version which makes a lot of jumps through the memory just fights against CPU and it's caches not only ignoring it's power but also wasting time needed for handling cache misses. Also the things getting even more complicated when considering threading but that's a case for it's own topic.
 
-![CPU cache architecture overview](http://2.bp.blogspot.com/-FuIP_W7YF60/T3q4Dt5Dj4I/AAAAAAAACOc/aXQe7qxP2aE/s1600/cpu.png)
+![CPU cache architecture overview](/images/cpu-caches/cpu-caches-overview.png)
 
 CPU cache architecture overview
 

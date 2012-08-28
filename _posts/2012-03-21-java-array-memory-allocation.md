@@ -13,7 +13,7 @@ There are two ways to create an array in Java:
 
 Both cases require the element type and the array length to be specified. These two values are needed to allocate appropriate memory structure for the array. Arrays in Java are just objects and theirs memory representation is quite similar:
 
-![](http://4.bp.blogspot.com/-WeX8Ap6bQVM/T3xLiQrsUmI/AAAAAAAACPk/mvKb3tjOypk/s1600/JavaObjectStructure.png)
+![](/images/java-arrays/java-object-structure.png)
 
 As we can see we have the header which contains 2 elements (more details later) and additional "size" element in case of arrays. After the header there are object fields or array elements placed. Anyway, this is still quite generic description. What if we want to get more detailed and real memory layout for our array? Is there a way to get it from the Java level?
 
@@ -21,7 +21,7 @@ As we can see we have the header which contains 2 elements (more details later) 
 
 Before trying to access the memory we need to know which platform we're going to use. The diagram below presents possible cases:
 
-![](http://4.bp.blogspot.com/-yUbT_ye66Fk/T32hcRQL7xI/AAAAAAAACQU/el5taNPiQuY/s1600/JavaArrayMemory32vs64bit.png)
+![](/images/java-arrays/java-array-memory-32vs64bit.png)
 
 It's important to remember that all Java objects are aligned to an 8 byte granularity. Because of that we have additional paddings in some cases.
 
@@ -84,7 +84,7 @@ Each line represents 4-byte value:
 
 Java implements multidimensional arrays as "arrays of array references":
 
-![](http://2.bp.blogspot.com/-PDsnOr3i394/T3xL1DKvShI/AAAAAAAACPw/KZqqQp7vG8U/s1600/Java2DimArrayInMemory.png)
+![](/images/java-arrays/multi-dim-array.png)
 
 Printing the array:
 
